@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 
+
 function Registration() {
 
     const [ Name, setName ] = useState ("");
@@ -23,12 +24,19 @@ function Registration() {
         localStorage.setItem("Password", JSON.stringify(Password));
 
         console.log("save in local storage")
-        console.log(!Login);
+        setLogin(!Login);
     }
    }
 
+
+   function handleClick() {
+    setLogin(!Login);
+   }
     return (
         <div>
+
+
+        {Login ? (
             <form>
                 <h1>Registration</h1>
                 <div>
@@ -63,8 +71,8 @@ function Registration() {
                         onChange={(event)=> setPhone(event.target.value)}
                     />
                 </div>
-                <button type="submit" className="btn btn-dark btn-lg btn-block">REgistration</button>
-                <p>Already Registration {" "} login in?</p>
+                <button type="submit" className="btn btn-dark btn-lg btn-block">Registration</button>
+                <p onClick={handleClick}>Already Registration {" "} login in?</p>
 
 
                 {Flage && (
@@ -74,7 +82,10 @@ function Registration() {
                     </Alert>
                 )}
             </form>
+):(
 
+            <Login />
+            )}
         </div>
     );
 }

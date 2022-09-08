@@ -1,13 +1,13 @@
 
 import './App.css';
-import Registration from './components/Registration/registration';
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import Registration from './pages/Registration/Registration';
+
+
 
 function App() {
   return (
     <div className="App">
-     hello world
-     <Registration />
+      <Registration />
     </div>
   );
 }
