@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Login() {
+
+    const [Emaillog, setEmaillog] = useState("");
+    const [Passwordlog, setPasswordlog] = useState("");
+    const [Flagelog, setFlagelog] = useState(false);
+    const [Home, setHome] = useState(true);
     return (
         <div>
              <form>
@@ -10,7 +15,7 @@ function Login() {
                     <input type="email"
                         className="form-control"
                         placeholder="masukkan Email anda"
-                        onChange={(event)=> setEmail(event.target.value)}
+                        onChange={(event)=> setEmaillog(event.target.value)}
                     />
                 </div>
                 <div>
@@ -18,7 +23,7 @@ function Login() {
                     <input type="password"
                         className="form-control"
                         placeholder="masukkan Password anda"
-                        onChange={(event)=> setPassword(event.target.value)}
+                        onChange={(event)=> setPasswordlog(event.target.value)}
                     />
                 </div>
                 </form>

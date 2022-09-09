@@ -1,6 +1,8 @@
 import { Alert } from "bootstrap";
 import React from "react";
 import { useState } from "react";
+// import Login from "../Login/Login";
+
 
 
 
@@ -33,10 +35,13 @@ function Registration() {
     setLogin(!Login);
    }
     return (
+<>
+
+        
         <div>
 
 
-        {Login ? (
+    
             <form>
                 <h1>Registration</h1>
                 <div>
@@ -71,9 +76,10 @@ function Registration() {
                         onChange={(event)=> setPhone(event.target.value)}
                     />
                 </div>
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Registration</button>
-                <p onClick={handleClick}>Already Registration {" "} login in?</p>
+                <button onClick={handleClick}type="submit" className="btn btn-dark btn-lg btn-block" >Registration</button>
+             
 
+                    <p>already registration?<a href="/login"><span>Login</span></a></p>
 
                 {Flage && (
                     <Alert color="primary" variant='danfer'>
@@ -82,11 +88,10 @@ function Registration() {
                     </Alert>
                 )}
             </form>
-):(
 
-            <Login />
-            )}
         </div>
+
+        </>
     );
 }
 
