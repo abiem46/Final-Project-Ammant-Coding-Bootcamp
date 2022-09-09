@@ -24,9 +24,15 @@
 }
 
 .card-body {
-  background-color: rgb(58, 84, 231);
-  color: rgb(255, 255, 255) !important;
+  background-color: rgb(255, 255, 255);
+  color: rgb(10, 28, 112) !important;
   border: 5px;
   text-align: center;
   padding: 10px 20px;
+}
+
+.container {
+  border-radius: 5px;
+  border-spacing: 5px;
+  justify-content: space-around;
 }

@@ -3,6 +3,7 @@ import IconSD from "../../assets/IconSD.png";
 import IconSMP from "../../assets/IconSMP.png";
 import IconSMA from "../../assets/IconSMA.png";
 import { Link } from "react-router-dom";
+import "./CardMenu.css";
 
 const CardMenu = () => {
   return (
@@ -10,28 +11,28 @@ const CardMenu = () => {
       <div className="mt-5 container">
         <div className="row row-cols-1 row-cols-md-3 g-5">
           <div className="col">
-            <div className="card">
-              <img src={IconSD} className="card-img-top" alt="photo1" />
+            <div className="card-logo">
+              <img src={IconSD} className="card-img-top img-logo" alt="photo1" style={{ height: "18rem", width: "16rem" }} />
             </div>
-            <Link to="/course/listTutorSD" type="button" class="btn warna-button">
+            <Link to="/course/listTutorSD" type="button" className="btn warna-button btn-dark mt-5 mb-5">
               Tutor SD
             </Link>
           </div>
 
           <div className="col">
-            <div className="card">
-              <img src={IconSMP} className="card-img-top" alt="photo4" />
+            <div className="card-logo">
+              <img src={IconSMP} className="card-img-top img-logo" alt="photo4" style={{ height: "18rem", width: "16rem" }} />
             </div>
-            <Link to="/course/listTutorSMP" type="button" class="btn warna-button">
+            <Link to="/course/listTutorSMP" type="button" className="btn warna-button btn-dark mt-5 mb-5">
               Tutor SMP
             </Link>
           </div>
 
           <div className="col">
-            <div className="card">
-              <img src={IconSMA} className="card-img-top" alt="photo15" />
+            <div className="card-logo">
+              <img src={IconSMA} className="card-img-top img-logo" alt="photo15" style={{ height: "18rem", width: "16rem" }} />
             </div>
-            <Link to="/course/listTutorSMA" type="button" class="btn warna-button">
+            <Link to="/course/listTutorSMA" type="button" className="btn warna-button btn-dark mt-5 mb-5">
               Tutor SMA
             </Link>
           </div>

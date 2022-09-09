@@ -6,6 +6,7 @@ function ListTutorSMP() {
   return (
     <>
       <CardMenu />
+      <h1>Tutor Sekolah Menengah Pertama</h1>
       <CardTutor />
     </>
   );
