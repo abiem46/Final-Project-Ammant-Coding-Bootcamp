@@ -8,6 +8,7 @@ function Login() {
     const [Home, setHome] = useState(true);
     return (
         <div>
+            <h1>Login</h1>
              <form>
          <div>
            
@@ -25,7 +26,8 @@ function Login() {
                         placeholder="masukkan Password anda"
                         onChange={(event)=> setPasswordlog(event.target.value)}
                     />
-                </div>
+                </div><br /><br />
+                <button type="submit" className="btn btn-dark btn-lg btn-block" >Login Boss</button>
                 </form>
         </div>
     )
