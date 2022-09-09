@@ -1,0 +1,35 @@
+/* team */
+/* body {
+    background-color: #ddd;
+} */
+h1 {
+    margin: 50px 0;
+    text-align: center;
+}
+.container2 {
+    width: 600px;
+    /* background-color: white; */
+    margin: auto;
+    padding: 10px;
+}
+/* .gallery {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: black;
+    float: left;
+    margin-right: 10px;
+} */
+.photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: black;
+    float: left;
+    margin-right: 10px;
+}
+.text{
+    
+}
