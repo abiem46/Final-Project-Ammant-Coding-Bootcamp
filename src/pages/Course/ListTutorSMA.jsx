@@ -6,6 +6,7 @@ function ListTutorSMA() {
   return (
     <>
       <CardMenu />
+      <h1>Tutor Sekolah Menengah Atas</h1>
       <CardTutor />
     </>
   );
