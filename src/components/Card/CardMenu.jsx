@@ -12,36 +12,27 @@ const CardMenu = () => {
           <div className="col">
             <div className="card">
               <img src={IconSD} className="card-img-top" alt="photo1" />
-              <div className="card-body">
-                <h5 className="card-title">Tutor SD</h5>
-              </div>
             </div>
             <Link to="/course/listTutorSD" type="button" class="btn warna-button">
-              SD
+              Tutor SD
             </Link>
           </div>
 
           <div className="col">
             <div className="card">
               <img src={IconSMP} className="card-img-top" alt="photo4" />
-              <div className="card-body">
-                <h5 className="card-title">Tutor SMP</h5>
-              </div>
             </div>
             <Link to="/course/listTutorSMP" type="button" class="btn warna-button">
-              SMP
+              Tutor SMP
             </Link>
           </div>
 
           <div className="col">
             <div className="card">
               <img src={IconSMA} className="card-img-top" alt="photo15" />
-              <div className="card-body">
-                <h5 className="card-title">Tutor SMA</h5>
-              </div>
             </div>
             <Link to="/course/listTutorSMA" type="button" class="btn warna-button">
-              SMA
+              Tutor SMA
             </Link>
           </div>
         </div>
