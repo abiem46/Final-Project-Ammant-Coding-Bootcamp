@@ -40,6 +40,8 @@ function Registration() {
         
         <div>
 
+            <div className="container">
+
 
     
             <form>
@@ -75,9 +77,9 @@ function Registration() {
                         placeholder="masukkan telepon anda"
                         onChange={(event)=> setPhone(event.target.value)}
                     />
-                </div>
-                <button onClick={handleClick}type="submit" className="btn btn-dark btn-lg btn-block" >Registration</button>
-             
+                </div><br /><br />
+                <button onClick={handleClick}type="submit" className="btn btn-dark btn-lg btn-block nt-5" >Registration</button>
+             <br /><br />
 
                     <p>already registration?<a href="/login"><span>Login</span></a></p>
 
@@ -88,6 +90,7 @@ function Registration() {
                     </Alert>
                 )}
             </form>
+            </div>
 
         </div>
 
