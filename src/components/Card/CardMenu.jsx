@@ -37,6 +37,8 @@ const CardMenu = () => {
           </div>
         </div>
       </div>
+
+      <hr />
     </>
   );
 };
