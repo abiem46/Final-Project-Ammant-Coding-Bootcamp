@@ -1,7 +1,10 @@
+
+
+
 import { Alert } from "bootstrap";
 import React from "react";
-import { useState } from "react";
-// import Login from "../Login/Login";
+import { useState, useEffect } from "react";
+import Login from "../Login/Login";
 
 
 
@@ -15,15 +18,22 @@ function Registration() {
     const [ Flage, setFlage ] = useState (false);
     const [ Login, setLogin ] = useState (true);
 
-   function handleSubmit(e) {
+   
+    function handleSubmit(e) {
+        console.log("ini kepanggil")
     e.preventDefault();
     if(!Name ||!Email ||!Password || !Phone){
         setFlage(true);
 
     }else{
         setFlage(false);
-        localStorage.setItem("Email", JSON.stringify(Email));
-        localStorage.setItem("Password", JSON.stringify(Password));
+
+        let registerUser = {
+           email: Email, 
+           password: Password
+        }
+        localStorage.setItem("registerUser", JSON.stringify(registerUser));
+      
 
         console.log("save in local storage")
         setLogin(!Login);
@@ -31,9 +41,15 @@ function Registration() {
    }
 
 
+
+
    function handleClick() {
     setLogin(!Login);
    }
+   useEffect (()=>{
+    console.log(Email, Password, Phone, Name)
+   },[Email, Password, Phone, Name])
+   
     return (
 <>
 
@@ -52,6 +68,7 @@ function Registration() {
                         className="form-control"
                         placeholder="masukkan nama anda"
                         onChange={(event)=> setName(event.target.value)}
+
                     />
                 </div>
                 <div>
@@ -78,10 +95,10 @@ function Registration() {
                         onChange={(event)=> setPhone(event.target.value)}
                     />
                 </div><br /><br />
-                <button onClick={handleClick}type="submit" className="btn btn-dark btn-lg btn-block nt-5" >Registration</button>
+                <button onClick={(e)=>handleSubmit(e)}type="submit" className="btn btn-dark btn-lg btn-block nt-5" >Registration</button>
              <br /><br />
 
-                    <p>already registration?<a href="/login"><span>Login</span></a></p>
+                    <p>Already registration?<a href="/login"><span>Login</span></a></p>
 
                 {Flage && (
                     <Alert color="primary" variant='danfer'>
