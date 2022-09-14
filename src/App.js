@@ -9,6 +9,8 @@ import ListTutorSD from "./pages/Course/ListTutorSD";
 import ListTutorSMP from "./pages/Course/ListTutorSMP";
 import ListTutorSMA from "./pages/Course/ListTutorSMA";
 import About from "./pages/About/About";
+import MyCourse from "./pages/MyCourse/MyCourse";
+import Payment from "./pages/Payment/Payment";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/course/listTutorSD" element={<ListTutorSD />} />
         <Route path="/course/listTutorSMP" element={<ListTutorSMP />} />
         <Route path="/course/listTutorSMA" element={<ListTutorSMA />} />
+        <Route path="/myCourse" element={<MyCourse />} />
+        <Route path="/payment" element={<Payment />} />
         {/* <Route path="/blog" element={<Blog />} /> */}
       </Routes>
       {/* <Registration /> */}
