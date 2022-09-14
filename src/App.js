@@ -11,6 +11,7 @@ import ListTutorSMA from "./pages/Course/ListTutorSMA";
 import About from "./pages/About/About";
 import MyCourse from "./pages/MyCourse/MyCourse";
 import Payment from "./pages/Payment/Payment";
+import TutorCourse from "./pages/TutorCourse/TutorCourse";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/course/listTutorSMA" element={<ListTutorSMA />} />
         <Route path="/myCourse" element={<MyCourse />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/tutorCourse" element={<TutorCourse />} />
         {/* <Route path="/blog" element={<Blog />} /> */}
       </Routes>
       {/* <Registration /> */}
