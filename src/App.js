@@ -14,11 +14,13 @@ import Payment from "./pages/Payment/Payment";
 import TutorCourse from "./pages/TutorCourse/TutorCourse";
 import Team from "./components/Team/Team";
 import Notification from "./components/Notifcation/Notification";
+import NavbarTwo from "./components/Layout/NavbarTwo";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      {/* <NavbarTwo /> */}
 
       <Routes>
         <Route path="/" element={<Homepage />} />

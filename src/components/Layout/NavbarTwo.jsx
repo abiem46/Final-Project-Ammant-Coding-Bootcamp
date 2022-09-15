@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
+import Dropdown from "react-bootstrap/Dropdown";
 
-const Navbar = () => {
+const NavbarTwo = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light container-fluid">
@@ -34,11 +35,14 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                <button className="nav-item">
-                  <Link to="/login" className="nav-link active current-page" href="#">
-                    Login
-                  </Link>
-                </button>
+                <Dropdown>
+                  <Dropdown.Toggle id="dropdown-basic">Menu</Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">My Course</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Log Out</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </ul>
             </div>
           </form>
@@ -48,4 +52,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarTwo;
