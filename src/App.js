@@ -12,7 +12,7 @@ import About from "./pages/About/About";
 import MyCourse from "./pages/MyCourse/MyCourse";
 import Payment from "./pages/Payment/Payment";
 import TutorCourse from "./pages/TutorCourse/TutorCourse";
-import Team from "./components/Team/Team";
+
 
 function App() {
   return (
@@ -25,7 +25,6 @@ function App() {
         <Route path="/register" element={<Registration />} />
         <Route path="/course" element={<Course />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Team" element={<Team />} />
         <Route path="/course/listTutorSD" element={<ListTutorSD />} />
         <Route path="/course/listTutorSMP" element={<ListTutorSMP />} />
         <Route path="/course/listTutorSMA" element={<ListTutorSMA />} />

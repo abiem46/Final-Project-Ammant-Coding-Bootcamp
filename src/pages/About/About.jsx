@@ -15,7 +15,7 @@ const About = () => {
                 </div>
                 <img src={ME} alt="about-img" />
             </div>
-            <p>Team ?<a href="/Team"><span>Team</span></a></p>
+            <p><a href="/Team"><span>Team</span></a></p>
         </div>
     )
 }
