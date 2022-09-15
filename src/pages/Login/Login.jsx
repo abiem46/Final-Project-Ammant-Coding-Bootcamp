@@ -2,6 +2,7 @@ import { Alert } from "bootstrap";
 import React from "react";
 import { useState, useEffect } from "react";
 import "../Login/Login.css";
+import { useCheckLogin } from "../../helper/getLocalStorage";
 
 function Login() {
   const [Email, setEmail] = useState("");
@@ -9,9 +10,12 @@ function Login() {
   const [Flage, setFlage] = useState(false);
   const [Login, setLogin] = useState(true);
 
+  const { userData } = useCheckLogin();
+
   function handleSubmit(e) {
     console.log("ini kepanggil");
     e.preventDefault();
+
     if (!Email || !Password) {
       setFlage(true);
     } else {
@@ -28,12 +32,10 @@ function Login() {
     }
   }
 
-  function handleClick() {
-    setLogin(!Login);
-  }
   useEffect(() => {
-    console.log(Email, Password);
-  }, [Email, Password]);
+    console.log(userData);
+    // console.log(Email, Password);
+  }, [Email, Password, userData]);
 
   return (
     <>
@@ -44,11 +46,11 @@ function Login() {
 
             <div>
               <label htmlFor="">Email</label>
-              <input type="email" className="form-control" placeholder="masukkan Email anda" onChange={(event) => setEmail(event.target.value)} />
+              <input type="email" className="form-control" placeholder="Masukkan Email Anda" onChange={(event) => setEmail(event.target.value)} />
             </div>
             <div>
               <label htmlFor="">Password</label>
-              <input type="password" className="form-control" placeholder="masukkan Password anda" onChange={(event) => setPassword(event.target.value)} />
+              <input type="password" className="form-control" placeholder="Masukkan Password Anda" onChange={(event) => setPassword(event.target.value)} />
             </div>
             <br />
             <br />
