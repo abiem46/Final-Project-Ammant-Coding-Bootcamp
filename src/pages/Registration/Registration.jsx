@@ -4,7 +4,7 @@
 import { Alert } from "bootstrap";
 import React from "react";
 import { useState, useEffect } from "react";
-import Login from "../Login/Login";
+// import Login from "../Login/Login";
 
 
 
@@ -29,8 +29,10 @@ function Registration() {
         setFlage(false);
 
         let registerUser = {
+            name: Name,
            email: Email, 
-           password: Password
+           password: Password,
+           phone: Phone
         }
         localStorage.setItem("registerUser", JSON.stringify(registerUser));
       
