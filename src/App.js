@@ -13,6 +13,7 @@ import MyCourse from "./pages/MyCourse/MyCourse";
 import Payment from "./pages/Payment/Payment";
 import TutorCourse from "./pages/TutorCourse/TutorCourse";
 import Team from "./components/Team/Team";
+import Notification from "./components/Notifcation/Notification";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/course/listTutorSMA" element={<ListTutorSMA />} />
         <Route path="/myCourse" element={<MyCourse />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/notif" element={<Notification />} />
         <Route path="/tutorCourse" element={<TutorCourse />} />
         {/* <Route path="/blog" element={<Blog />} /> */}
       </Routes>

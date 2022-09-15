@@ -1,5 +1,6 @@
 import React from "react";
 import "./Payment.css";
+import { Link } from "react-router-dom";
 
 const Payment = () => {
   return (
@@ -53,9 +54,9 @@ const Payment = () => {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary mt-5">
-          Submit
-        </button>
+        <Link to="/notif" type="submit" className="btn btn-primary mt-5">
+          Chekout
+        </Link>
       </div>
     </>
   );
