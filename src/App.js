@@ -15,13 +15,14 @@ import TutorCourse from "./pages/TutorCourse/TutorCourse";
 import Team from "./components/Team/Team";
 import Notification from "./components/Notifcation/Notification";
 import NavbarTwo from "./components/Layout/NavbarTwo";
+import Footer from "./components/Layout/Footer";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       {/* <NavbarTwo /> */}
-
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
@@ -36,9 +37,11 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/notif" element={<Notification />} />
         <Route path="/tutorCourse" element={<TutorCourse />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/blog" element={<Blog />} /> */}
       </Routes>
-      {/* <Registration /> */}
+
+      <Footer />
     </div>
   );
 }

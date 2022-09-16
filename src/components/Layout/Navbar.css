@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-  background-color: rgb(5, 44, 117) !important;
+  background-color: rgb(76, 80, 88) !important;
   max-width: 100%;
   /* margin-top: 1rem; */
   border-radius: 10px;
@@ -47,6 +47,6 @@ body {
 
 button {
   border-radius: 10px;
-  background-color: rgb(5, 44, 117);
+  background-color: rgb(76, 80, 88);
   border: none;
 }
