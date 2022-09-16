@@ -39,7 +39,7 @@ function Registration() {
   return (
     <>
       <div>
-        <div className="container">
+        <div className="container-user">
           <form>
             <h1>Registration</h1>
             <div>
