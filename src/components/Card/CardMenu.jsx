@@ -14,7 +14,7 @@ const CardMenu = () => {
             <div className="card-logo">
               <img src={IconSD} className="card-img-top img-logo" alt="photo1" style={{ height: "18rem", width: "16rem" }} />
             </div>
-            <Link to="/course/listTutorSD" type="button" className="btn warna-button btn-dark mt-5 mb-5">
+            <Link to="/course/listTutorSD" type="button" className="btn warna-button btn-menu mt-5 mb-5">
               Tutor SD
             </Link>
           </div>
@@ -23,7 +23,7 @@ const CardMenu = () => {
             <div className="card-logo">
               <img src={IconSMP} className="card-img-top img-logo" alt="photo4" style={{ height: "18rem", width: "16rem" }} />
             </div>
-            <Link to="/course/listTutorSMP" type="button" className="btn warna-button btn-dark mt-5 mb-5">
+            <Link to="/course/listTutorSMP" type="button" className="btn warna-button btn-menu mt-5 mb-5">
               Tutor SMP
             </Link>
           </div>
@@ -32,7 +32,7 @@ const CardMenu = () => {
             <div className="card-logo">
               <img src={IconSMA} className="card-img-top img-logo" alt="photo15" style={{ height: "18rem", width: "16rem" }} />
             </div>
-            <Link to="/course/listTutorSMA" type="button" className="btn warna-button btn-dark mt-5 mb-5">
+            <Link to="/course/listTutorSMA" type="button" className="btn warna-button btn-menu mt-5 mb-5">
               Tutor SMA
             </Link>
           </div>

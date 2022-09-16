@@ -39,8 +39,8 @@ const NavbarTwo = () => {
                   <Dropdown.Toggle id="dropdown-basic">Menu</Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">My Course</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Log Out</Dropdown.Item>
+                    <Dropdown.Item href="/myCourse">My Course</Dropdown.Item>
+                    <Dropdown.Item href="/login">Log Out</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </ul>
