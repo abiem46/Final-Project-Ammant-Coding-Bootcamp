@@ -1,6 +1,10 @@
 import React from "react";
 import Avatar from "../../components/Avatar/Avatar";
 import "./Homepage.css";
+import Course from "../Course/Course";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
+import CardTeam from "../About/CardTeam";
 
 function Homepage({ Foto1 }) {
   return (
@@ -19,6 +23,18 @@ function Homepage({ Foto1 }) {
 
         <Avatar src={Foto1} />
       </div>
+
+      <hr />
+
+      <About />
+
+      <hr />
+      <Course />
+      <hr />
+      <CardTeam />
+      <hr />
+      <Contact />
+
       {/* dddd */}
       {/* <div className="d-flex">
         <div className="title">

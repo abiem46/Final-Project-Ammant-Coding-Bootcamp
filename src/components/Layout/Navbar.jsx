@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   return (
@@ -19,28 +20,28 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link to="/" className="nav-link active current-page" aria-current="page" href="#">
+                  <Link to="/" className="nav-link active current-page" aria-current="page">
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/about" className="nav-link active current-page" href="#">
+                  <HashLink to="/#about" className="nav-link active current-page" smooth>
                     About
-                  </Link>
+                  </HashLink>
                 </li>
                 <li className="nav-item">
-                  <Link to="/course" className="nav-link active current-page" href="#">
+                  <Link to="/course" className="nav-link active current-page">
                     Course
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/contact" className="nav-link active current-page" href="#">
+                  <HashLink to="/#contact" className="nav-link active current-page" smooth>
                     Contact
-                  </Link>
+                  </HashLink>
                 </li>
 
                 <button className="nav-item">
-                  <Link to="/login" className="nav-link active current-page" href="#">
+                  <Link to="/login" className="nav-link active current-page">
                     Login
                   </Link>
                 </button>
