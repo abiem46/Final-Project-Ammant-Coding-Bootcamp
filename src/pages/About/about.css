@@ -1,5 +1,4 @@
 .about {
-  /* background-color: #f8f8f8; */
   margin: auto;
   padding: 8rem 1rem 0 1rem;
   width: 100%;
@@ -47,24 +46,24 @@
 }
 
 @media screen and (max-width: 1240px) {
-  .about .container {
+  .about .card-about {
     grid-template-columns: 1fr;
   }
 
-  .about .container {
+  .about .card-about {
     width: 100%;
   }
 
-  .about .container img {
+  .about .card-about img {
     padding: 0rem;
     width: 90vw;
   }
 
-  .about .container .col-2 {
+  .about .card-about .col-2 {
     padding: 0;
   }
 }
-.row{
+.cardTeam{
   padding: 50px;
 }
 .medsos {
