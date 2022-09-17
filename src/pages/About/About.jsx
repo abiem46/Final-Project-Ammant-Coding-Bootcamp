@@ -1,6 +1,7 @@
 import React from "react";
 import "../About/about.css";
 import ME from "../../assets/ME.png";
+import CardTeam from "./CardTeam";
 
 const About = () => {
   return (
@@ -17,12 +18,7 @@ const About = () => {
         </div>
         <img src={ME} alt="about-img" />
       </div>
-      <p>
-        Team ?
-        <a href="/Team">
-          <span>Team</span>
-        </a>
-      </p>
+      <CardTeam/>
     </div>
   );
 };
