@@ -40,8 +40,9 @@
   display: inline-block;
   font-size: 0.8rem;
   color: black;
+  background-color: grey;
 }
-.col-6{
+.col-6 {
   color: black;
 }
 
@@ -63,7 +64,7 @@
     padding: 0;
   }
 }
-.cardTeam{
+.cardTeam {
   padding: 50px;
 }
 .medsos {
@@ -73,4 +74,3 @@
   display: flex;
   justify-content: space-around;
 }
-
