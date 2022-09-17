@@ -11,7 +11,7 @@ import Photo4 from '../../assets/GI.jpg'
 
 function CardTeam() {
         return (
-            <div className='row'>
+            <div className='row cardTeam'>
                 <h3>Team KSB-SMART</h3>
                 <div className="col-3">
                     <div className="card radius-15">
