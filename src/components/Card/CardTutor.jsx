@@ -3,18 +3,16 @@ import "./CardTutor.css";
 import { Link } from "react-router-dom";
 
 const CardTutor = (props) => {
-
-  
   return (
     <>
-      <div className="col">
-        <div className="card mb-3" style={{ objectFit: "cover" }}>
+      <div className="col tutor">
+        <div className="card-tutor mb-3">
           <div className="row g-0">
             <div className="col-md-4">
               <img src={props.gambar} className="img-fluid rounded-start" alt="foto tutor" />
             </div>
             <div className="col-md-8">
-              <div className="card-body">
+              <div className="card-body-tutor">
                 <h5 className="card-title">{props.author}</h5>
                 <h6 className="card-title">{props.study}</h6>
                 <hr />

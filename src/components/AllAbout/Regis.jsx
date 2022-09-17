@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import reg from "./regishere.png";
+import reg from "../../assets/regishere.png";
 
 const Regis = () => {
   return (
