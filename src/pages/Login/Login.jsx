@@ -3,38 +3,63 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../Login/Login.css";
 import { useCheckLogin } from "../../helper/getLocalStorage";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Login() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [Flage, setFlage] = useState(false);
   const [Login, setLogin] = useState(true);
+  const [userRegister, setUserRegister] = useState(null);
 
   const { userData } = useCheckLogin();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
-    console.log("ini kepanggil");
-    e.preventDefault();
-
-    if (!Email || !Password) {
-      setFlage(true);
-    } else {
-      setFlage(false);
-
-      let loginUser = {
-        email: Email,
-        password: Password,
-      };
-      localStorage.setItem("loginUser", JSON.stringify(loginUser));
-
-      console.log("save in local storage");
-      setLogin(!Login);
+    let dataUser = null;
+    if (userRegister) {
+      dataUser = userRegister.find((user) => {
+        return Email === user.email && Password === user.password;
+      });
     }
+    if (dataUser) {
+      Swal.fire({
+        icon: "success",
+        title: "Successfully Login Your Account",
+        text: `Success Login for Account ${dataUser.email}`,
+      });
+      navigate("/");
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "The data cannot be empty or the data you entered is wrong!",
+      });
+    }
+    // console.log("ini kepanggil");
+    // e.preventDefault();
+
+    // if (!Email || !Password) {
+    //   setFlage(true);
+    // } else {
+    //   setFlage(false);
+
+    //   let loginUser = {
+    //     email: Email,
+    //     password: Password,
+    //   };
+    //   localStorage.setItem("loginUser", JSON.stringify(loginUser));
+
+    //   console.log("save in local storage");
+    //   setLogin(!Login);
+    // }
   }
 
   useEffect(() => {
-    console.log(userData);
-    // console.log(Email, Password);
+    fetch("https://6323201ea624bced3087ce24.mockapi.io/register", { method: "GET" })
+      .then((response) => response.json())
+      .then((data) => setUserRegister(data));
   }, [Email, Password, userData]);
 
   return (

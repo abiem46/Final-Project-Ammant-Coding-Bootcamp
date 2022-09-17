@@ -27,7 +27,7 @@ const CardTutorCourse = () => {
                       <hr />
 
                       <div>
-                        <Link to="" type="button" class="btn warna-button btn-secondary text-center ">
+                        <Link to="" type="button" className="btn warna-button btn-secondary text-center ">
                           WA
                         </Link>
                       </div>

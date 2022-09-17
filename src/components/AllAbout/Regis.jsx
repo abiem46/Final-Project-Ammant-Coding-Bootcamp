@@ -10,7 +10,7 @@ const Regis = () => {
       <h3>Dapatkan Tutor Favoritmu hanya di KSB-SMART </h3>
       <h5>Yuk Daftarkan Dirimu dibawah ini !!</h5>
       <div className="reg-button mt-5">
-        <Link to="/register" type="button" class="btn btn-primary btn-lg">
+        <Link to="/register" type="button" className="btn btn-primary btn-lg">
           Click Here To Register
         </Link>
       </div>

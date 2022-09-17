@@ -31,12 +31,12 @@ const CardMyCourse = () => {
                       <small className="text-muted">Jam : 08.00-10.00 WITA</small>
                     </p>
                     <div>
-                      <Link to="" type="button" class="btn warna-button btn-secondary text-center ">
+                      <Link to="" type="button" className="btn warna-button btn-secondary text-center ">
                         WA
                       </Link>
                     </div>
                     <div className="mt-3">
-                      <Link to="" type="button" class="btn warna-button btn-secondary text-center ">
+                      <Link to="" type="button" className="btn warna-button btn-secondary text-center ">
                         Zoom
                       </Link>
                     </div>
@@ -65,12 +65,12 @@ const CardMyCourse = () => {
                       <small className="text-muted">Jam : 08.00-10.00 WITA</small>
                     </p>
                     <div>
-                      <Link to="" type="button" class="btn warna-button btn-secondary text-center ">
+                      <Link to="" type="button" className="btn warna-button btn-secondary text-center ">
                         WA
                       </Link>
                     </div>
                     <div className="mt-3">
-                      <Link to="" type="button" class="btn warna-button btn-secondary text-center ">
+                      <Link to="" type="button" className="btn warna-button btn-secondary text-center ">
                         Zoom
                       </Link>
                     </div>

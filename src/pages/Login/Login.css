@@ -1,14 +1,13 @@
 html,
 body {
   height: 100%;
- 
 }
 .container-user {
   background-color: rgb(190, 196, 196);
   padding: 100px 100px;
   border: double;
   margin: 50px 100px 50px 100px;
-  background-image: url(../../assets/foto1.png);
+  background-image: url(../../assets/Rg.png);
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center;
