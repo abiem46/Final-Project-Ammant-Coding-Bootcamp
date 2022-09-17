@@ -42,6 +42,9 @@
   font-size: 0.8rem;
   color: black;
 }
+.col-6{
+  color: black;
+}
 
 @media screen and (max-width: 1240px) {
   .about .container {
@@ -61,3 +64,14 @@
     padding: 0;
   }
 }
+.row{
+  padding: 50px;
+}
+.medsos {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
