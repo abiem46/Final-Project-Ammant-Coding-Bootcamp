@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "../../components/Layout/Navbar";
 import CardMenu from "../../components/Card/CardMenu";
 import CardTutor from "../../components/Card/CardTutor";
 
@@ -17,6 +18,7 @@ function ListTutorSD() {
 
   return (
     <>
+      <Navbar />
       <CardMenu />
       <h1>Tutor Sekolah Dasar</h1>
       <div className="mt-5 container">

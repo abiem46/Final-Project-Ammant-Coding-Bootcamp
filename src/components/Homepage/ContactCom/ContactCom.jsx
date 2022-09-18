@@ -1,12 +1,9 @@
 import React from "react";
-import Navbar from "../../components/Layout/Navbar";
-import Regis from "../../components/AllAbout/Regis";
-import "./Contact.css";
+import Regis from "../../../components/AllAbout/Regis";
 
-function Contact() {
+function ContactCom() {
   return (
     <>
-      <Navbar />
       <section id="contact">
         <div className="contact">
           <div>
@@ -64,4 +61,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactCom;

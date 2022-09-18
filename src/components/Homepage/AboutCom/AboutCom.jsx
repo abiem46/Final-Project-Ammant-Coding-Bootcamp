@@ -1,13 +1,9 @@
 import React from "react";
-import "../About/about.css";
-import ME from "../../assets/ME.png";
-import Navbar from "../../components/Layout/Navbar";
+import ME from "../../../assets/ME.png";
 
-const About = () => {
+const AboutCom = () => {
   return (
     <>
-      <Navbar />
-
       <div className="about" id="about">
         <div className="container card-about">
           <div className="col-6">
@@ -25,4 +21,4 @@ const About = () => {
     </>
   );
 };
-export default About;
+export default AboutCom;

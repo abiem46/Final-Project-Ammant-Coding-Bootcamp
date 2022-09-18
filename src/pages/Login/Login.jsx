@@ -5,12 +5,13 @@ import "../Login/Login.css";
 import { useCheckLogin } from "../../helper/getLocalStorage";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import Navbar from "../../components/Layout/Navbar";
 
 function Login() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [Flage, setFlage] = useState(false);
-  const [Login, setLogin] = useState(true);
+  // const [Flage, setFlage] = useState(false);
+  // const [Login, setLogin] = useState(true);
   const [userRegister, setUserRegister] = useState(null);
 
   const { userData } = useCheckLogin();
@@ -29,6 +30,7 @@ function Login() {
         title: "Successfully Login Your Account",
         text: `Success Login for Account ${dataUser.email}`,
       });
+      localStorage.setItem("userLogin", JSON.stringify(dataUser));
       navigate("/");
     } else {
       Swal.fire({
@@ -64,6 +66,7 @@ function Login() {
 
   return (
     <>
+      <Navbar />
       <div>
         <div className="container-user">
           <form>
@@ -92,11 +95,11 @@ function Login() {
               </a>
             </p>
 
-            {Flage && (
+            {/* {Flage && (
               <Alert color="primary" variant="danfer">
                 please fill Every field
               </Alert>
-            )}
+            )} */}
           </form>
         </div>
       </div>
