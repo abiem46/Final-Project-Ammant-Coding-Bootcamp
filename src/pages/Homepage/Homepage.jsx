@@ -1,14 +1,16 @@
 import React from "react";
 import Avatar from "../../components/Avatar/Avatar";
 import "./Homepage.css";
-import Course from "../Course/Course";
-import About from "../About/About";
-import Contact from "../Contact/Contact";
 import CardTeam from "../About/CardTeam";
+import Navbar from "../../components/Layout/Navbar";
+import AboutCom from "../../components/Homepage/AboutCom/AboutCom";
+import CourseCom from "../../components/Homepage/CourseCom/CourseCom";
+import ContactCom from "../../components/Homepage/ContactCom/ContactCom";
 
 function Homepage({ Foto1 }) {
   return (
     <>
+      <Navbar />
       <div className="welcome">
         <div className="welcomeHeading">
           <h2>GET THE BEST</h2>
@@ -26,14 +28,14 @@ function Homepage({ Foto1 }) {
 
       <hr />
 
-      <About />
+      <AboutCom />
 
       <hr />
-      <Course />
+      <CourseCom />
       <hr />
       <CardTeam />
       <hr />
-      <Contact />
+      <ContactCom />
 
       {/* dddd */}
       {/* <div className="d-flex">

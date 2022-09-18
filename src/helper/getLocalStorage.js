@@ -4,7 +4,7 @@ export const useCheckLogin = () => {
   const [userData, setUserData] = useState(null);
 
   const getLocalStorage = () => {
-    let userlogin = localStorage.getItem("registerUser");
+    let userlogin = localStorage.getItem("userLogin");
     setUserData(JSON.parse(userlogin));
   };
 

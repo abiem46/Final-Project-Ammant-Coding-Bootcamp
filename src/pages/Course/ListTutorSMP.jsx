@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardMenu from "../../components/Card/CardMenu";
 import CardTutor from "../../components/Card/CardTutor";
+import Navbar from "../../components/Layout/Navbar";
 
 function ListTutorSMP() {
   const [dataTutor, setDataTutor] = useState([]);
@@ -17,6 +18,7 @@ function ListTutorSMP() {
 
   return (
     <>
+      <Navbar />
       <CardMenu />
       <h1>Tutor Sekolah Menengah Pertama</h1>
       <div className="mt-5 container">

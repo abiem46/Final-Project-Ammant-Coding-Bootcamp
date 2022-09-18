@@ -8,7 +8,7 @@ import Course from "./pages/Course/Course";
 import ListTutorSD from "./pages/Course/ListTutorSD";
 import ListTutorSMP from "./pages/Course/ListTutorSMP";
 import ListTutorSMA from "./pages/Course/ListTutorSMA";
-// import About from "./pages/About/About";
+import About from "./pages/About/About";
 import MyCourse from "./pages/MyCourse/MyCourse";
 import Payment from "./pages/Payment/Payment";
 import TutorCourse from "./pages/TutorCourse/TutorCourse";
@@ -21,14 +21,14 @@ import Footer from "./components/Layout/Footer";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <NavbarTwo /> */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Registration />} />
         <Route path="/course" element={<Course />} />
-        {/* <Route path="/About" element={<About />} /> */}
+        <Route path="/about" element={<About />} />
         <Route path="/Team" element={<Team />} />
         <Route path="/course/listTutorSD" element={<ListTutorSD />} />
         <Route path="/course/listTutorSMP" element={<ListTutorSMP />} />

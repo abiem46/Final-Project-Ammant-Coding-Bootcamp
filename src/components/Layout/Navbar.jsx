@@ -5,9 +5,18 @@ import Logo from "../../assets/logo.png";
 import { HashLink } from "react-router-hash-link";
 import { useCheckLogin } from "../../helper/getLocalStorage";
 import Dropdown from "react-bootstrap/Dropdown";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { userData } = useCheckLogin();
+  const logout = () => {
+    localStorage.removeItem("userLogin");
+    Swal.fire({
+      icon: "success",
+      title: "Successfully Log Out",
+      text: "Success Log Out for Account",
+    });
+  };
 
   useEffect(() => {
     console.log(userData);
@@ -50,17 +59,16 @@ const Navbar = () => {
                     </HashLink>
                   </li>
 
-                  {userData === "Siswa" ? (
-                    <>
-                      <button className="nav-item">
-                        <Link to="/login" className="nav-link active current-page">
-                          Login
-                        </Link>
-                      </button>
-                    </>
-                  ) : (
-                    <></>
-                  )}
+                  <Dropdown>
+                    <Dropdown.Toggle id="dropdown-basic">Menu</Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="/myCourse">My Course</Dropdown.Item>
+                      <Dropdown.Item href="/login" onClick={logout}>
+                        Log Out
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </ul>
               </div>
             </form>
@@ -97,14 +105,11 @@ const Navbar = () => {
                     </Link>
                   </li>
 
-                  <Dropdown>
-                    <Dropdown.Toggle id="dropdown-basic">Menu</Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="/myCourse">My Course</Dropdown.Item>
-                      <Dropdown.Item href="/login">Log Out</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                  <button className="nav-item">
+                    <Link to="/login" className="nav-link active current-page">
+                      Login
+                    </Link>
+                  </button>
                 </ul>
               </div>
             </form>

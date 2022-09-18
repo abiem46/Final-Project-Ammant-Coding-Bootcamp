@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
+import Navbar from "../../components/Layout/Navbar";
 // import Login from "../Login/Login";
 
 function Registration() {
@@ -62,6 +63,7 @@ function Registration() {
 
   return (
     <>
+    <Navbar/>
       <div>
         <div className="container-user">
           <form onSubmit={daftarUser}>
