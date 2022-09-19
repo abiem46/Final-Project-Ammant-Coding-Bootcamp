@@ -2,8 +2,8 @@ import Swal from "sweetalert2";
 
 export function addCourse(dispatch, state) {
   Swal.fire({
-    title: "Sweet!",
-    text: "Berhasil Masuk ke Keranjang",
+    title: "OK",
+    text: "Successfully Entered Card Tutor to Payment Page",
     icon: "success",
     confirmButtonText: '<i className="fa fa-thumbs-up"></i> Great!',
   });
@@ -18,7 +18,7 @@ export function addCourse(dispatch, state) {
 export function delCourse(dispatch, state) {
   Swal.fire({
     title: "OK",
-    text: "Data  berhasil dihapus",
+    text: "Data deleted successfully",
     icon: "success",
     confirmButtonText: '<i className="fa fa-thumbs-up"></i> Great!',
   });

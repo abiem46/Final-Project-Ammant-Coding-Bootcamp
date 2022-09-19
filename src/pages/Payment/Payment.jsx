@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/Layout/Navbar";
 import { useAuthState, useAuthDispatch } from "../../context/store";
 import CardPayment from "../../components/Card/CardPayment";
+import { delCourse } from "../../context/Action";
 
 const Payment = () => {
   const state = useAuthState();
