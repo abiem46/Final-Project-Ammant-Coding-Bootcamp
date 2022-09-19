@@ -6,6 +6,7 @@ import { useCheckLogin } from "../../helper/getLocalStorage";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import Navbar from "../../components/Layout/Navbar";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [Email, setEmail] = useState("");
@@ -18,6 +19,7 @@ function Login() {
   const navigate = useNavigate();
 
   function handleSubmit(e) {
+    e.preventDefault();
     let dataUser = null;
     if (userRegister) {
       dataUser = userRegister.find((user) => {
@@ -90,9 +92,9 @@ function Login() {
 
             <p>
               Don't have an account ?
-              <a href="/register">
+              <Link to="/register">
                 <span>Register</span>
-              </a>
+              </Link>
             </p>
 
             {/* {Flage && (

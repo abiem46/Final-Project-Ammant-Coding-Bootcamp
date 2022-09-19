@@ -5,39 +5,25 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import Navbar from "../../components/Layout/Navbar";
 // import Login from "../Login/Login";
+import { useNavigate } from "react-router-dom";
 
 function Registration() {
+  const navigate = useNavigate();
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [Phone, setPhone] = useState("");
+  const [role, setRole] = useState("");
   const [Flage, setFlage] = useState(false);
   const [Login, setLogin] = useState(true);
 
-  function handleSubmit(e) {
-    console.log("ini kepanggil");
-    e.preventDefault();
-    if (!Name || !Email || !Password || !Phone) {
-      setFlage(true);
-    } else {
-      setFlage(false);
-
-      let registerUser = {
-        name: Name,
-        email: Email,
-        password: Password,
-        phone: Phone,
-      };
-      localStorage.setItem("registerUser", JSON.stringify(registerUser));
-
-      console.log("save in local storage");
-      setLogin(!Login);
-    }
-  }
+  const handleRole = (e) => {
+    setRole(e.target.value);
+  };
 
   useEffect(() => {
-    console.log(Email, Password, Phone, Name);
-  }, [Email, Password, Phone, Name]);
+    console.log(Email, Password, Phone, Name, role);
+  }, [Email, Password, Phone, Name, role]);
 
   const daftarUser = async (e) => {
     e.preventDefault();
@@ -47,6 +33,7 @@ function Registration() {
       email: Email,
       password: Password,
       phone: Phone,
+      role: role,
     };
 
     await axios.post("https://6323201ea624bced3087ce24.mockapi.io/register", data).then((result) => {
@@ -57,13 +44,14 @@ function Registration() {
           title: "Successfully Register Your Account",
           text: `Success Register for Account ${result.email}`,
         });
+        navigate("/login");
       }
     });
   };
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div>
         <div className="container-user">
           <form onSubmit={daftarUser}>
@@ -84,6 +72,16 @@ function Registration() {
               <label htmlFor="">Phone</label>
               <input type="phone" className="form-control" placeholder="Masukkan Nomor Telepon Anda" onChange={(event) => setPhone(event.target.value)} />
             </div>
+
+            <label>
+              <input type="radio" checked={role === "user"} name="user" value="user" onChange={handleRole} />
+              User
+            </label>
+            <label>
+              <input type="radio" checked={role === "tutor"} name="tutor" value="tutor" onChange={handleRole} />
+              Tutor
+            </label>
+
             <br />
             <br />
             <button type="submit" className="btn btn-dark btn-lg btn-block nt-5">
