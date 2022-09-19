@@ -1,8 +1,7 @@
 import React from "react";
 import "./CardTutor.css";
-import { Link } from "react-router-dom";
 
-const CardTutor = (props) => {
+const CardPayment = (props) => {
   return (
     <>
       <div className="col tutor">
@@ -23,9 +22,10 @@ const CardTutor = (props) => {
                   <br />
                   <small className="text-muted">Jam : {props.time} WITA</small>
                 </p>
-                <Link to="/payment" type="button" className="btn warna-button btn-secondary text-center " onClick={props.tombol}>
-                  Booking
-                </Link>
+
+                <button to="/payment" type="button" className="btn warna-button btn-secondary text-center" onClick={props.tombolhapus}>
+                  Hapus
+                </button>
               </div>
             </div>
           </div>
@@ -35,4 +35,4 @@ const CardTutor = (props) => {
   );
 };
 
-export default CardTutor;
+export default CardPayment;
