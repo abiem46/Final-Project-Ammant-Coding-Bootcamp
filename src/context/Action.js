@@ -7,7 +7,7 @@ export function addCourse(dispatch, state) {
     icon: "success",
     confirmButtonText: '<i className="fa fa-thumbs-up"></i> Great!',
   });
-  console.log(state);
+  console.log(state, 'ini state nyaa');
   console.log("ini add");
   return dispatch({
     type: "ADD_COURSE",
@@ -34,4 +34,13 @@ export function delstate(dispatch, state) {
     type: "DEL_STATE",
     delstate: state,
   });
+
 }
+
+export function payment(dispatch, state) {
+    console.log(state, 'ini state yang di isi');
+    return dispatch({
+      type: "CHECKOUT_SUCCESS",
+      payment: state
+    });
+  }
