@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Payment.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Layout/Navbar";
 import { useAuthState, useAuthDispatch } from "../../context/store";
 import CardPayment from "../../components/Card/CardPayment";
-import { delCourse } from "../../context/Action";
+import { delCourse, payment } from "../../context/Action";
 
 const Payment = () => {
+  const navigate = useNavigate()
   const state = useAuthState();
   const dispatch = useAuthDispatch();
 
@@ -18,11 +19,6 @@ const Payment = () => {
   const [data, setData] = useState([]);
   const [course, setCourse] = useState([]);
 
-  const setPayment = () => {
-    const pay = localStorage.getItem("userPay");
-    setData(JSON.parse(pay));
-    // console.log(pay);
-  };
 
   const handlePayment = () => {
     // e.preventDefault();
@@ -30,41 +26,31 @@ const Payment = () => {
       name,
       email,
       phone,
-      address,
-      state,
+      address
     };
 
-    if (data === null) {
-      setData(dataPayment);
-      localStorage.setItem("userPay", JSON.stringify([dataPayment]));
-    }
-    // else {
-    //   localStorage.setItem("userPay", JSON.stringify(...dataPayment));
-    //   // setData(...data, dataPayment);
-    // }
+    const dataPembelian = {
+          pembeli: dataPayment,
+          tutor: state.items
+        };
 
-    // if (data === null) {
-    //   setData(dataPayment);
-    //   localStorage.setItem("userPay", JSON.stringify(data));
-    // } else {
-    //   localStorage.setItem("userPay", JSON.stringify(data.concat(dataPayment)));
-    //   setIsipesan(data.concat(dataPayment));
-    // }
+        payment(dispatch, dataPembelian)
+        navigate('/notif')
+
   };
 
   useEffect(() => {
-    setPayment();
-    // console.log(dataPayment);
-  });
+    console.log(state);
+  },[]);
 
-  if (state.items.length === 0) {
+  if (!state.items.id) {
     return (
       <>
         <Navbar />
         <h1>Data Masih Kosong</h1>
       </>
     );
-  } else {
+  } else if (state.items.id) {
     return (
       <>
         <Navbar />
@@ -76,9 +62,11 @@ const Payment = () => {
 
         <div className="mt-5 container">
           <div className="row row-cols-1 row-cols-md-3 g-5 ">
-            <div key={state.items[1].id}>
+            {/* <div key={state.items[1].id}>
               <CardPayment gambar={state.items[1].photo} author={state.items[1].author} study={state.items[1].study} time={state.items[1].time} tombolhapus={() => delCourse(dispatch, state.items)} />
-            </div>
+            </div> */}
+            <CardPayment gambar={state.items.photo} author={state.items.author} study={state.items.study} time={state.items.time} tombolhapus={() => delCourse(dispatch, state.items)} />
+
           </div>
         </div>
         <div className="container con-pay">
@@ -104,7 +92,7 @@ const Payment = () => {
               <label for="exampleInputContact" className="form-label">
                 Contact :
               </label>
-              <input type="number" className="form-control" id="exampleInputNumber" aria-describedby="emailHelp" placeholder="Enter your phone number" onChange={(e) => setPhone(e.target.value)} />
+              <input type="number" className="form-control" id="exampleInputNumber" aria-describedby="emailHelp" placeholder="Enter your phone number +62" onChange={(e) => setPhone(e.target.value)} />
             </div>
             <div className="mb-3">
               <label for="exampleInputAdress" className="form-label">
@@ -132,9 +120,9 @@ const Payment = () => {
               </label>
             </div>
           </div>
-          <Link to="/myCourse" type="submit" className="btn btn-primary mt-5" onClick={() => handlePayment()}>
+          <button className="btn btn-primary mt-5" onClick={handlePayment}>
             Chekout
-          </Link>
+          </button>
         </div>
       </>
     );

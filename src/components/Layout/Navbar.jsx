@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { HashLink } from "react-router-hash-link";
 import { useCheckLogin } from "../../helper/getLocalStorage";
@@ -8,9 +8,11 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const { userData } = useCheckLogin();
   const logout = () => {
     localStorage.removeItem("userLogin");
+    navigate('/login')
     Swal.fire({
       icon: "success",
       title: "Successfully Log Out",
@@ -63,8 +65,11 @@ const Navbar = () => {
                     <Dropdown.Toggle id="dropdown-basic">Menu</Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                      <Dropdown.Item href="/myCourse">My Course</Dropdown.Item>
-                      <Dropdown.Item href="/login" onClick={logout}>
+                      <Dropdown.Item >
+                      <Link  to="/myCourse" className="nav-link active">
+                      My Course
+                    </Link></Dropdown.Item>
+                      <Dropdown.Item onClick={logout}>
                         Log Out
                       </Dropdown.Item>
                     </Dropdown.Menu>

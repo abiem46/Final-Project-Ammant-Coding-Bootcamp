@@ -1,5 +1,6 @@
 export const initialState = {
-  items: [],
+  items: {},
+  pembelian: [],
   total: 0,
 };
 
@@ -7,19 +8,25 @@ export const Reducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_COURSE":
       return {
-        state,
-        items: [state.items, action.addCourse],
+        ...state,
+        items: action.addCourse,
       };
     case "DEL_COURSE":
       return {
         ...state,
-        items: [],
+        items: {},
       };
     case "DEL_STATE":
       console.log("delstate");
       return {
         ...state,
-        items: [],
+        items: {},
+      };
+      case "CHECKOUT_SUCCESS":
+      return {
+        ...state,
+        pembelian: [...state.pembelian, action.payment],
+        items: {}
       };
 
     default:

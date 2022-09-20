@@ -1,8 +1,19 @@
 import React from "react";
 import "./CardTutor.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { addCourse } from "../../context/Action";
+import { useAuthDispatch, useAuthState } from "../../context/store";
 
 const CardTutor = (props) => {
+  const navigate = useNavigate()
+  const dispatch = useAuthDispatch()
+
+  const paymentCourse = (e) => {
+    e.preventDefault()
+    addCourse(dispatch, props.listFull)
+    navigate('/payment')
+  }
+
   return (
     <>
       <div className="col tutor">
@@ -23,9 +34,9 @@ const CardTutor = (props) => {
                   <br />
                   <small className="text-muted">Jam : {props.time} WITA</small>
                 </p>
-                <Link to="/payment" type="button" className="btn warna-button btn-secondary text-center " onClick={props.tombol}>
+                <button type="button" className="btn warna-button btn-secondary text-center " onClick={paymentCourse}>
                   Booking
-                </Link>
+                </button>
               </div>
             </div>
           </div>
