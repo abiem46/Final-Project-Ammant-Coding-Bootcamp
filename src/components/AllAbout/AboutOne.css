@@ -1,0 +1,21 @@
+.container-t{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 50px 50px 50px 250px;
+   
+}
+.cardd{
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+   
+}
+.card-bodyd{
+    border: double;
+    border-radius: 1rem;
+    background-color: white;
+    justify-content: center;
+   
+   
+    
+}

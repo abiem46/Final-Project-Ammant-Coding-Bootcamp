@@ -1,44 +1,46 @@
 import React from "react";
+import "../AllAbout/AboutOne.css"
 
 
 
 const AboutOne = () => {
   return <>
+  <h3>Kenapa Harus KSB Smart?</h3>
 <div className="container-t">
-  <h3>Kenapa Harus KSB Smart</h3>
-  <div className="row g-0">
-<div class="col-3 card" >
+  <br />
+  <div className="row g-3">
+<div class="col-10 cardd" >
   
-  <div class="card-body">
-    <h5 class="card-title">Aman</h5>
-    <p class="card-text">Aplikasi KSB Smart menjamin data pengguna tetap amman</p>
+  <div class="card-bodyd">
+    <h5 class="card-titled">Aman</h5>
+    <p class="card-textd">Aplikasi KSB Smart menjamin data pengguna tetap amman</p>
    
   </div>
 </div>
 
-<div class="col-3 card" >
+<div class="col-10 cardd" >
   
-  <div class="card-body">
-    <h5 class="card-title">Terpecaya</h5>
-    <p class="card-text">hampir 85% warga NTB menggunakan aplikasi KSB SMart.</p>
+  <div class="card-bodyd">
+    <h5 class="card-titled">Terpecaya</h5>
+    <p class="card-textd">hampir 85% warga NTB menggunakan aplikasi KSB SMart.</p>
    
   </div>
 </div>
 
-<div class="col-3 card" >
+<div class="col-10 cardd" >
   
-  <div class="card-body">
-    <h5 class="card-title">Sistem Pembelajaran</h5>
-    <p class="card-text">KSB Smart sudah memakai 2 metode pembelajaran yaitu via remote dan tatap muka.</p>
+  <div class="card-bodyd">
+    <h5 class="card-titled">Sistem Pembelajaran</h5>
+    <p class="card-textd">KSB Smart sudah memakai 2 metode pembelajaran yaitu via remote dan tatap muka.</p>
    
   </div>
 </div>
 
-<div class="col-3 card" >
+<div class="col-10 cardd" >
   
-  <div class="card-body">
-    <h5 class="card-title">Tutor</h5>
-    <p class="card-text">Bekerjama dengan totor Hero Impact yang sudah berpengalamn dalam bidangnya.</p>
+  <div class="card-bodyd">
+    <h5 class="card-titled">Tutor</h5>
+    <p class="card-textd">Bekerjama dengan totor Hero Impact yang sudah berpengalamn dalam bidangnya.</p>
    
   </div>
 </div>
