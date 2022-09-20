@@ -1,6 +1,6 @@
 .about {
   margin: auto;
-  padding: 8rem 1rem 0 1rem;
+  padding: 2rem 1rem 0 1rem;
   width: 100%;
 }
 
@@ -72,4 +72,14 @@
   margin: auto;
   display: flex;
   justify-content: space-around;
+}
+.umi{
+  justify-content: center;
+  font-size: 50px;
+}
+.line{
+  font-size: 30px;
+}
+.ikbal {
+  font-size: 20px;
 }
