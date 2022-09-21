@@ -1,0 +1,73 @@
+.about {
+  margin: auto;
+  padding: 2rem 1rem 0 1rem;
+  width: 100%;
+}
+
+.card-about {
+  width: 1240px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about h2 {
+  font-size: 3rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+}
+
+.gina {
+  color: black;
+}
+
+@media screen and (max-width: 1240px) {
+  .about .card-about {
+    grid-template-columns: 1fr;
+  }
+
+  .about .card-about {
+    width: 100%;
+  }
+
+  .about .card-about img {
+    padding: 0rem;
+    width: 90vw;
+  }
+
+  .about .card-about {
+    padding: 0;
+  }
+}
+
+.card-body{
+  background-color: #e1dfdf;
+}
+.cardTeam {
+  padding: 50px;
+}
+.medsos {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.umi{
+  justify-content: center;
+  font-size: 50px;
+}
+.line{
+  font-size: 30px;
+  color: teal;
+}
+.ikbal {
+  font-size: 20px;
+  color: black;
+}

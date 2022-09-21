@@ -1,0 +1,79 @@
+.footer {
+  background-color: rgb(76, 80, 88) !important;
+}
+
+.describe {
+  color: rgb(168, 196, 248) !important;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  justify-content: space-around;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
+.span {
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  justify-content: space-around;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
+#footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+}
+#footer .footer {
+  min-height: 100px;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+#footer h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+#footer .social-icon {
+  display: flex;
+  padding-bottom: 10px;
+  padding-right: 2px;
+  justify-content: center;
+}
+#footer .social-item {
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  padding: 5px;
+}
+#footer .social-item img {
+  filter: grayscale(1);
+  transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+  filter: grayscale(0);
+}
+#footer p {
+  color: white;
+  font-size: 0.8rem;
+}
+.social-item a {
+  text-decoration: none;
+  justify-content: center;
+}
+.social-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

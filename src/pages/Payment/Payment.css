@@ -1,0 +1,10 @@
+.con-pay {
+  padding: 2rem 2rem;
+  color: black !important;
+  align-items: center;
+}
+
+.method-pay {
+  align-items: center;
+  justify-content: center !important;
+}

@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+.container-user {
+  border-color: red;
+  background-color: rgb(190, 196, 196);
+  padding: 100px 100px;
+  border: double;
+  margin: 5% 10;
+  background-image: url(../../assets/Rg.png);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-width: 624px) {
+
+  .container-user {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .container-user {
+    width: 100%;
+  }
+}

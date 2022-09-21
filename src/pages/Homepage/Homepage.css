@@ -1,0 +1,64 @@
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeHeading {
+  border: 3px solid white;
+  border-style: ridge;
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: rgb(87, 158, 209);
+  opacity: 0.9;
+  padding: 5% 8%;
+  margin: 5%;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  margin-right: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  border-bottom: 8px solid steelblue;
+  border-radius: 15px;
+  width: 40rem;
+}
+
+.welcomeHeading:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 320px), (max-width: 768px) {
+  /* .welcome {
+    display: list-item;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  } */
+
+  .carousel {
+    display: list-item;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .welcome {
+    display: list-item !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .carousel {
+    display: list-item;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

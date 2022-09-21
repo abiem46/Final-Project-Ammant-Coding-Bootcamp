@@ -1,0 +1,44 @@
+.paragraph {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+#content {
+  /* display:flex; */
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-width: 2px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.card-tutor {
+  /* position: absolute; */
+  padding: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-tutor:hover {
+  box-shadow: 0 8px 16px 0 rgba(59, 106, 235, 0.877);
+}
+
+.card-body-tutor {
+  background-color: rgb(255, 255, 255);
+  color: rgb(10, 28, 112) !important;
+  border: 5px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.tutor {
+  border-radius: 5px;
+  border-spacing: 5px;
+  justify-content: space-around;
+}
