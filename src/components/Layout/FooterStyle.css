@@ -48,6 +48,8 @@
 #footer .social-icon {
   display: flex;
   padding-bottom: 10px;
+  padding-right: 2px;
+  justify-content: center;
 }
 #footer .social-item {
   height: 60px;
@@ -68,6 +70,7 @@
 }
 .social-item a {
   text-decoration: none;
+  justify-content: center;
 }
 .social-item img {
   height: 100%;
