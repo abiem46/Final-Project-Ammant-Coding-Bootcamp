@@ -22,22 +22,22 @@ function Homepage() {
           <Carousel.Item>
             <img className=" w-100" src={Foto1} alt="First slide" />
             <Carousel.Caption>
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h2>AMAN</h2>
+              <p>Aplikasi KSB Smart menjamin data pengguna tetap amman</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className=" w-100" src={Foto2} alt="Second slide" />
             <Carousel.Caption>
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h2>Terpercaya</h2>
+              <p>hampir 85% warga NTB menggunakan aplikasi KSB SMart</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className=" w-100" src={Foto3} alt="Third slide" />
             <Carousel.Caption>
-              <h5>Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h2>Sistem Pembelajaran</h2>
+              <p>KSB Smart sudah memakai 2 metode pembelajaran yaitu via remote dan tatap muka</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
