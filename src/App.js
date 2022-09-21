@@ -12,24 +12,19 @@ import About from "./pages/About/About";
 import MyCourse from "./pages/MyCourse/MyCourse";
 import Payment from "./pages/Payment/Payment";
 import TutorCourse from "./pages/TutorCourse/TutorCourse";
-import Team from "./components/Team/Team";
 import Notification from "./components/Notifcation/Notification";
-import NavbarTwo from "./components/Layout/NavbarTwo";
 import Footer from "./components/Layout/Footer";
-// import Contact from "./pages/Contact/Contact";
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      {/* <NavbarTwo /> */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Registration />} />
         <Route path="/course" element={<Course />} />
         <Route path="/about" element={<About />} />
-        <Route path="/Team" element={<Team />} />
         <Route path="/course/listTutorSD" element={<ListTutorSD />} />
         <Route path="/course/listTutorSMP" element={<ListTutorSMP />} />
         <Route path="/course/listTutorSMA" element={<ListTutorSMA />} />
