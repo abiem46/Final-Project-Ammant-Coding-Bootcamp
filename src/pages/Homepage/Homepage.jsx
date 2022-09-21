@@ -6,12 +6,42 @@ import Navbar from "../../components/Layout/Navbar";
 import AboutCom from "../../components/Homepage/AboutCom/AboutCom";
 import CourseCom from "../../components/Homepage/CourseCom/CourseCom";
 import ContactCom from "../../components/Homepage/ContactCom/ContactCom";
+import Carousel from "react-bootstrap/Carousel";
+import Foto1 from "../../assets/foto1.png";
+import Foto2 from "../../assets/Lo.png";
+import Foto3 from "../../assets/ME.png";
 
-function Homepage({ Foto1 }) {
+function Homepage() {
   return (
     <>
       <Navbar />
       <div className="welcome">
+        {/* Carousel Awal */}
+
+        <Carousel className="mt-5 carousel" variant="dark">
+          <Carousel.Item>
+            <img className=" w-100" src={Foto1} alt="First slide" />
+            <Carousel.Caption>
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className=" w-100" src={Foto2} alt="Second slide" />
+            <Carousel.Caption>
+              <h5>Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className=" w-100" src={Foto3} alt="Third slide" />
+            <Carousel.Caption>
+              <h5>Third slide label</h5>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+        {/* Carousel Akhir */}
         <div className="welcomeHeading">
           <h2>GET THE BEST</h2>
           <br />
@@ -23,7 +53,7 @@ function Homepage({ Foto1 }) {
           <p>"We help you in Earning during practical Learning"</p>
         </div>
 
-        <Avatar src={Foto1} />
+        {/* <Avatar src={Foto1} /> */}
       </div>
 
       <hr />
