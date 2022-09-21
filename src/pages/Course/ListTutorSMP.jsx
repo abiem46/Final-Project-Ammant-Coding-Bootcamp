@@ -31,7 +31,7 @@ function ListTutorSMP() {
       <div className="mt-5 container">
         <div className="row row-cols-1 row-cols-md-3 g-5 ">
           {dataTutor.map((list) => (
-            <CardTutor key={list.id} gambar={list.photo} author={list.author} study={list.study} time={list.time} tombol={() => addCourse(dispatch, list)} />
+            <CardTutor listFull={list} key={list.id} gambar={list.photo} author={list.author} study={list.study} time={list.time} tombol={() => addCourse(dispatch, list)} />
           ))}
         </div>
       </div>
