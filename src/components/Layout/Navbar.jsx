@@ -8,11 +8,11 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { userData } = useCheckLogin();
   const logout = () => {
     localStorage.removeItem("userLogin");
-    navigate('/login')
+    navigate("/login");
     Swal.fire({
       icon: "success",
       title: "Successfully Log Out",
@@ -65,13 +65,12 @@ const Navbar = () => {
                     <Dropdown.Toggle id="dropdown-basic">Menu</Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                      <Dropdown.Item >
-                      <Link  to="/myCourse" className="nav-link active">
-                      My Course
-                    </Link></Dropdown.Item>
-                      <Dropdown.Item onClick={logout}>
-                        Log Out
+                      <Dropdown.Item>
+                        <Link to="/myCourse" className="nav-link active">
+                          My Course
+                        </Link>
                       </Dropdown.Item>
+                      <Dropdown.Item onClick={logout}>Log Out</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 </ul>
@@ -100,14 +99,20 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/about" className="nav-link active current-page" href="#">
+                    <HashLink to="/#about" className="nav-link active current-page" smooth>
                       About
-                    </Link>
+                    </HashLink>
                   </li>
                   <li className="nav-item">
                     <Link to="/course" className="nav-link active current-page" href="#">
                       Course
                     </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <HashLink to="/#contact" className="nav-link active current-page" smooth>
+                      Contact
+                    </HashLink>
                   </li>
 
                   <button className="nav-item">
