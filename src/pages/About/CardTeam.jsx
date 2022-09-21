@@ -5,7 +5,7 @@ import { GrInstagram } from "react-icons/gr";
 import { BsLinkedin } from "react-icons/bs";
 import Photo from "../../assets/MI.png";
 import Photo2 from "../../assets/IK.jpeg";
-import ME from "../../assets/ME.png";
+import Photo3 from "../../assets/Ab.jpeg";
 import Photo4 from "../../assets/GI.jpg";
 
 function CardTeam() {
@@ -17,7 +17,7 @@ function CardTeam() {
           <div className="card radius-15">
             <div className="card-body text-center">
               <div className="p-4 border radius-15">
-                <img src={ME} width="110" height="110" className="rounded-circle shadow" alt="" />
+                <img src={Photo3} width="110" height="110" className="rounded-circle shadow" alt="" />
                 <h5 className="mb-0 mt-5">Ahmad Fauzul Kabir</h5>
                 <p className="mb-3">Team I</p>
                 <div className="medsos mt-3 mb-3">
