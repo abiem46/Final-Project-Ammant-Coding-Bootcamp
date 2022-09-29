@@ -82,6 +82,15 @@ function Registration() {
               Tutor
             </label>
 
+            {/* <button checked={role === "user"} name="user" value="user" onChange={handleRole}>
+              Register as User
+              
+            </button>
+
+            <button checked={role === "tutor"} name="tutor" value="tutor" onChange={handleRole}>
+              Register as Tutor
+            </button> */}
+
             <br />
             <br />
             <button type="submit" className="btn btn-dark btn-lg btn-block nt-5">
