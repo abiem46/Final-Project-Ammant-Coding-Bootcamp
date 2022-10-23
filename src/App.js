@@ -14,7 +14,7 @@ import Payment from "./pages/Payment/Payment";
 import TutorCourse from "./pages/TutorCourse/TutorCourse";
 import Notification from "./components/Notifcation/Notification";
 import Footer from "./components/Layout/Footer";
-
+import Datatutor from "./pages/Registration/Datatutor";
 
 function App() {
   return (
@@ -32,6 +32,8 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/notif" element={<Notification />} />
         <Route path="/tutorCourse" element={<TutorCourse />} />
+        <Route path="/detail" element={<Datatutor />} />
+
         {/* <Route path="/contact" element={<Contact />} /> */}
         {/* <Route path="/blog" element={<Blog />} /> */}
       </Routes>
