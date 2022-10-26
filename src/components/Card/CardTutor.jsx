@@ -38,7 +38,11 @@ const CardTutor = (props) => {
               <div className="col-md-8">
                 <div className="card-body-tutor">
                   <h5 className="card-title">{props.author}</h5>
-                  <h6 className="card-title">{props.study}</h6>
+                  <h6 className="card-title">
+                    <span>
+                      {props.study} Kelas {props.kelas} {props.jenjang}
+                    </span>
+                  </h6>
                   <hr />
                   <p className="card-text">
                     <small className="card-text">Jadwal</small>

@@ -14,6 +14,7 @@ function Registration() {
   const [Password, setPassword] = useState("");
   const [Phone, setPhone] = useState("");
   const [role, setRole] = useState("");
+  const [jenjang, setJenjang] = useState("");
   const [Flage, setFlage] = useState(false);
   const [Login, setLogin] = useState(true);
 
@@ -34,6 +35,7 @@ function Registration() {
       password: Password,
       phone: Phone,
       role: role,
+      pendidikan: jenjang,
     };
 
     await axios.post("https://6323201ea624bced3087ce24.mockapi.io/register", data).then((result) => {
@@ -81,6 +83,16 @@ function Registration() {
               <input type="radio" checked={role === "tutor"} name="tutor" value="tutor" onChange={handleRole} />
               Tutor
             </label>
+            {role === "tutor" && (
+              <>
+                <select class="form-select" aria-label="Default select example" onChange={(e) => setJenjang(e.target.value)}>
+                  <option selected>Jenjang Pendidikan</option>
+                  <option value="SD">SD</option>
+                  <option value="SMP">SMP</option>
+                  <option value="SMA">SMA</option>
+                </select>
+              </>
+            )}
 
             {/* <button checked={role === "user"} name="user" value="user" onChange={handleRole}>
               Register as User

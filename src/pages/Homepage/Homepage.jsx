@@ -12,6 +12,8 @@ import Foto2 from "../../assets/Lo.png";
 import Foto3 from "../../assets/ME.png";
 
 function Homepage() {
+  const userLogin = localStorage.getItem("userLogin");
+  const dataLogin = JSON.parse(userLogin);
   return (
     <>
       <Navbar />
@@ -62,6 +64,7 @@ function Homepage() {
 
       <hr />
       <CourseCom />
+
       <hr />
       <CardTeam />
       <hr />

@@ -5,9 +5,11 @@ import Navbar from "../../components/Layout/Navbar";
 import { useAuthState, useAuthDispatch } from "../../context/store";
 import CardPayment from "../../components/Card/CardPayment";
 import { delCourse, payment } from "../../context/Action";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const Payment = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const state = useAuthState();
   const dispatch = useAuthDispatch();
 
@@ -18,30 +20,44 @@ const Payment = () => {
 
   const [data, setData] = useState([]);
   const [course, setCourse] = useState([]);
-
+  const userLogin = localStorage.getItem("userLogin");
+  const dataLogin = JSON.parse(userLogin);
 
   const handlePayment = () => {
     // e.preventDefault();
     let dataPayment = {
-      name,
-      email,
-      phone,
-      address
+      name: dataLogin.name,
+      email: dataLogin.email,
+      phone: dataLogin.phone,
+      address: address,
     };
 
     const dataPembelian = {
-          pembeli: dataPayment,
-          tutor: state.items
-        };
-
-        payment(dispatch, dataPembelian)
-        navigate('/notif')
-
+      datatutor: state.items,
+      dataPayment,
+    };
+    axios.put(`https://6323201ea624bced3087ce24.mockapi.io/register/${Number(dataLogin.id)}`, { ...dataLogin, dataPembelian }).then((result) => {
+      console.log(result.status);
+      if (result.status === 200) {
+        Swal.fire({
+          title: "Good job!",
+          text: "Booking Berhasil",
+          icon: "success",
+          button: "Aww yiss!",
+        }).then((result) => {
+          console.log(result);
+        });
+      } else {
+        alert("tidak berhasil update");
+      }
+    });
+    payment(dispatch, dataPembelian);
+    navigate("/notif");
   };
 
   useEffect(() => {
     console.log(state);
-  },[]);
+  }, [data]);
 
   if (!state.items.id) {
     return (
@@ -65,8 +81,14 @@ const Payment = () => {
             {/* <div key={state.items[1].id}>
               <CardPayment gambar={state.items[1].photo} author={state.items[1].author} study={state.items[1].study} time={state.items[1].time} tombolhapus={() => delCourse(dispatch, state.items)} />
             </div> */}
-            <CardPayment gambar={state.items.photo} author={state.items.author} study={state.items.study} time={state.items.time} tombolhapus={() => delCourse(dispatch, state.items)} />
-
+            <CardPayment
+              gambar={state.items.datalengkap.foto}
+              author={state.items.datalengkap.nama}
+              study={state.items.datalengkap.pelajaran}
+              time={state.items.datalengkap.jam}
+              day={state.items.datalengkap.hari}
+              tombolhapus={() => delCourse(dispatch, state.items)}
+            />
           </div>
         </div>
         <div className="container con-pay">
@@ -80,19 +102,19 @@ const Payment = () => {
               <label for="exampleInputName" className="form-label">
                 Name :
               </label>
-              <input type="text" className="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter your full name" onChange={(e) => setName(e.target.value)} />
+              <input type="text" className="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter your full name" value={dataLogin.name} disabled />
             </div>
             <div className="mb-3">
               <label for="exampleInputEmail" className="form-label">
                 E-mail :
               </label>
-              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your e-mail" onChange={(e) => setEmail(e.target.value)} />
+              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your e-mail" value={dataLogin.email} disabled />
             </div>
             <div className="mb-3">
               <label for="exampleInputContact" className="form-label">
                 Contact :
               </label>
-              <input type="number" className="form-control" id="exampleInputNumber" aria-describedby="emailHelp" placeholder="Enter your phone number +62" onChange={(e) => setPhone(e.target.value)} />
+              <input type="number" className="form-control" id="exampleInputNumber" aria-describedby="emailHelp" placeholder="Enter your phone number +62" value={dataLogin.phone} disabled />
             </div>
             <div className="mb-3">
               <label for="exampleInputAdress" className="form-label">

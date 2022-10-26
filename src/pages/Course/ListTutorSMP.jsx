@@ -4,22 +4,27 @@ import CardTutor from "../../components/Card/CardTutor";
 import Navbar from "../../components/Layout/Navbar";
 import { useAuthDispatch, useAuthState } from "../../context/store";
 import { addCourse } from "../../context/Action";
-
+import axios from "axios";
 function ListTutorSMP() {
   const dispatch = useAuthDispatch();
   const state = useAuthState();
   const [dataTutor, setDataTutor] = useState([]);
 
   const fetchProduct = async () => {
-    const response = await fetch("https://6323201ea624bced3087ce24.mockapi.io/tutorSMP");
-    const result = await response.json();
-    setDataTutor(result);
+    const data = await axios.get("https://6323201ea624bced3087ce24.mockapi.io/register");
+    const datatutor = data.data.filter((user) => {
+      return user.role === "tutor" && user.pendidikan === "SMP";
+    });
+    const data1 = datatutor.filter((user) => {
+      return user.datalengkap;
+    });
+
+    setDataTutor(data1);
+    console.log("ini user", data1);
+    // console.log(data);
   };
   useEffect(() => {
     fetchProduct();
-  }, []);
-
-  useEffect(() => {
     setDataTutor(dataTutor);
   }, [state]);
 
@@ -31,7 +36,17 @@ function ListTutorSMP() {
       <div className="mt-5 container">
         <div className="row row-cols-1 row-cols-md-3 g-5 ">
           {dataTutor.map((list) => (
-            <CardTutor listFull={list} key={list.id} gambar={list.photo} author={list.author} study={list.study} time={list.time} tombol={() => addCourse(dispatch, list)} />
+            <CardTutor
+              listFull={list}
+              key={list.id}
+              gambar={list.datalengkap.foto}
+              author={list.datalengkap.nama}
+              study={list.datalengkap.pelajaran}
+              time={list.datalengkap.jam}
+              day={list.datalengkap.hari}
+              kelas={list.datalengkap.kelas}
+              jenjang={list.datalengkap.pendidikan}
+            />
           ))}
         </div>
       </div>

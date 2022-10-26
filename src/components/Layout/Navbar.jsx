@@ -20,9 +20,7 @@ const Navbar = () => {
     });
   };
 
-  useEffect(() => {
-    console.log(userData);
-  }, [userData]);
+  useEffect(() => {}, [userData]);
 
   return (
     <>
@@ -32,7 +30,6 @@ const Navbar = () => {
             <Link to="/" className="navbar-brand">
               <img src={Logo} className="card-img-top logo" alt="logo" />
             </Link>
-            <p>{userData.role}</p>
             {/* <button>Logout</button> */}
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -96,15 +93,16 @@ const Navbar = () => {
                           About
                         </HashLink>
                       </li>
-                      <li className="nav-item">
-                        <Link to="/course" className="nav-link active current-page">
-                          Course
-                        </Link>
-                      </li>
+
                       <li className="nav-item">
                         <HashLink to="/#contact" className="nav-link active current-page" smooth>
                           Contact
                         </HashLink>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/datapembeli" className="nav-link active current-page" smooth>
+                          My Class
+                        </Link>
                       </li>
                       <li className="nav-item">
                         <Link to="/detail" className="nav-link active current-page">
